@@ -8,7 +8,6 @@
 
 #import "ljLinkBase.h"
 @interface ljLinkBase ()
-@property (nonatomic,strong)NSMutableArray* oldStack;
 @end
 @implementation ljLinkBase
 - (ljLinkBase*)init{

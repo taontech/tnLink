@@ -10,6 +10,8 @@
 #import <Cocoa/Cocoa.h>
 @interface ljLinkBase : NSObject
 @property (nonatomic,assign)NSPoint center;
+@property (nonatomic,strong)NSMutableArray* oldStack;
+
 // 返回的 block 可以接参数
 - (ljLinkBase * (^)(NSPoint))moveTo;
 - (ljLinkBase * (^)())revert;

@@ -26,8 +26,13 @@
     
     self.linkBase = [[ljLinkBase alloc]init];
     
-    [RACObserve(self, linkBase.center) subscribeNext:^(id newName) {
+    [[RACObserve(self, linkBase.center) filter:^(id newName){
+        return (BOOL)([newName pointValue].x > 20);
+    }] subscribeNext:^(id newName) {
         NSLog(@"设置了新的点：x-%f,y-%f", [newName pointValue].x,[newName pointValue].x);
+    }];
+    [RACObserve(self, linkBase.oldStack) subscribeNext:^(id newName) {
+        NSLog(@"数组更新了", newName);
     }];
     self.linkBase.moveTo(CGPointMake(10, 20)).moveTo(CGPointMake(20, 40)).moveTo(CGPointMake(11, 33)).moveTo(CGPointMake(1, 2)).moveTo(CGPointMake(100, 200));
     self.linkBase.moveTo(CGPointMake(10, 20)).moveTo(CGPointMake(20, 40)).moveTo(CGPointMake(11, 33)).moveTo(CGPointMake(1, 2)).moveTo(CGPointMake(100, 200));
