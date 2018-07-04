@@ -4,4 +4,6 @@
 提供gitmanager软件绑定功能
 
 ## TODO
-后期提供恢复操作
+后期提供恢复操作,
+调试好GitManager
+
