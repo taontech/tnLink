@@ -20,9 +20,9 @@
 - (ljLinkBase *(^)(CGPoint))moveTo {
     return ^ (CGPoint pt) {
         self.center = pt;
-        NSLog(@"移动到 %f %f", self.center.x,self.center.y);
+       // NSLog(@"移动到 %f %f", self.center.x,self.center.y);
         [self.oldStack addObject:[NSValue valueWithPoint:(pt)]];
-        NSLog(self.oldStack.description);
+       // NSLog(self.oldStack.description);
         return self;
     };
 }
@@ -30,7 +30,7 @@
     return ^(){
         if(self.oldStack.count >= 2){
             self.center = [[self.oldStack objectAtIndex:(self.oldStack.count-2)] pointValue];
-            NSLog(@"恢复到 %f %f", self.center.x,self.center.y);
+           // NSLog(@"恢复到 %f %f", self.center.x,self.center.y);
 
             [self.oldStack removeLastObject];
 
@@ -47,15 +47,15 @@
     return ^(int step){
         if(self.oldStack.count >= step+1 && step != -1){
             self.center = [[self.oldStack objectAtIndex:(self.oldStack.count-step-1)] pointValue];
-            NSLog(@"恢复到 %f %f", self.center.x,self.center.y);
+          //  NSLog(@"恢复到 %f %f", self.center.x,self.center.y);
             
             [self.oldStack removeObjectsInRange:NSMakeRange(self.oldStack.count-step, step)];
         }else{
             self.center = [[self.oldStack firstObject] pointValue];
             [self.oldStack removeObjectsInRange:NSMakeRange(1, self.oldStack.count-1)];
-            NSLog(@"恢复到 %f %f", self.center.x,self.center.y);
+           // NSLog(@"恢复到 %f %f", self.center.x,self.center.y);
         }
-        NSLog(self.oldStack.description);
+       // NSLog(self.oldStack.description);
 
         return self;
     };
