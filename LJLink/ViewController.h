@@ -9,7 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import "ljLinkBase.h"
 #import <ReactiveObjC.h>
-@interface ViewController : NSViewController
+#import <WebKit/WebKit.h>
+@interface ViewController : NSViewController <WKNavigationDelegate,WKUIDelegate>
 
 @property (nonatomic,strong)ljLinkBase* linkBase;
 @property (nonatomic,assign)int size;

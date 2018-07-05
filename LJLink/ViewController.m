@@ -8,14 +8,27 @@
 
 #import "ViewController.h"
 #import "ljLinkBase.h"
+#import <WebKit/WebKit.h>
+@interface ViewController()
+@property (nonatomic,strong)WKWebView *webview;
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    WKWebViewConfiguration* webConfig = [[WKWebViewConfiguration alloc]init];
     
+    self.webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, 800, 800)
+                                     configuration:webConfig];
+    self.webview.UIDelegate = self;
+    self.webview.navigationDelegate = self;
+    NSURL* url = [NSURL URLWithString:@"http://localhost:8888/"];
+    NSURLRequest* urlrequest = [NSURLRequest requestWithURL:url];
     
-    
+    [self.webview loadRequest:urlrequest];
+    [self.webview reload];
+    [self.view addSubview:self.webview];
     [[RACObserve(self, name)
       filter:^(NSString *newName) {
           return [newName hasPrefix:@"j"];
@@ -34,6 +47,7 @@
     [RACObserve(self, linkBase.oldStack) subscribeNext:^(id newName) {
         NSLog(@"数组更新了", newName);
     }];
+
     self.linkBase.moveTo(CGPointMake(10, 20)).moveTo(CGPointMake(20, 40)).moveTo(CGPointMake(11, 33)).moveTo(CGPointMake(1, 2)).moveTo(CGPointMake(100, 200));
     self.linkBase.moveTo(CGPointMake(10, 20)).moveTo(CGPointMake(20, 40)).moveTo(CGPointMake(11, 33)).moveTo(CGPointMake(1, 2)).moveTo(CGPointMake(100, 200));
     
