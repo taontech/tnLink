@@ -23,7 +23,7 @@
                                      configuration:webConfig];
     self.webview.UIDelegate = self;
     self.webview.navigationDelegate = self;
-    NSURL* url = [NSURL URLWithString:@"http://localhost:8888/"];
+    NSURL* url = [NSURL URLWithString:@"http://localhost:8888"];
     NSURLRequest* urlrequest = [NSURLRequest requestWithURL:url];
     
     [self.webview loadRequest:urlrequest];
