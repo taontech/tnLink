@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4055253945167960C0DFC19E /* libPods-LJLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E005703B7EB969F018BED8C0 /* libPods-LJLink.a */; };
+		B62AD9DF20EE2894002F3D14 /* LJLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B62AD9DE20EE2894002F3D14 /* LJLinkTests.m */; };
 		B697D3D620E5E0E70081A251 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B697D3D520E5E0E70081A251 /* AppDelegate.m */; };
 		B697D3D920E5E0E70081A251 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B697D3D820E5E0E70081A251 /* ViewController.m */; };
 		B697D3DB20E5E0E80081A251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B697D3DA20E5E0E80081A251 /* Assets.xcassets */; };
@@ -16,9 +17,22 @@
 		B697D3EA20E5E1370081A251 /* ljLinkBase.m in Sources */ = {isa = PBXBuildFile; fileRef = B697D3E920E5E1370081A251 /* ljLinkBase.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B62AD9E120EE2894002F3D14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B697D3C920E5E0E70081A251 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B697D3D020E5E0E70081A251;
+			remoteInfo = LJLink;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		55E6A685E6822CF49D0B4515 /* Pods-LJLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LJLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-LJLink/Pods-LJLink.release.xcconfig"; sourceTree = "<group>"; };
 		8EAB9BD67AE9E87BCA8D1450 /* Pods-LJLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LJLink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LJLink/Pods-LJLink.debug.xcconfig"; sourceTree = "<group>"; };
+		B62AD9DC20EE2894002F3D14 /* LJLinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LJLinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62AD9DE20EE2894002F3D14 /* LJLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJLinkTests.m; sourceTree = "<group>"; };
+		B62AD9E020EE2894002F3D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B697D3D120E5E0E70081A251 /* LJLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B697D3D420E5E0E70081A251 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B697D3D520E5E0E70081A251 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,6 +49,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B62AD9D920EE2894002F3D14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B697D3CE20E5E0E70081A251 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,10 +67,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B62AD9D520EE280C002F3D14 /* test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		B62AD9DD20EE2894002F3D14 /* LJLinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				B62AD9DE20EE2894002F3D14 /* LJLinkTests.m */,
+				B62AD9E020EE2894002F3D14 /* Info.plist */,
+			);
+			path = LJLinkTests;
+			sourceTree = "<group>";
+		};
 		B697D3C820E5E0E70081A251 = {
 			isa = PBXGroup;
 			children = (
+				B62AD9D520EE280C002F3D14 /* test */,
 				B697D3D320E5E0E70081A251 /* LJLink */,
+				B62AD9DD20EE2894002F3D14 /* LJLinkTests */,
 				B697D3D220E5E0E70081A251 /* Products */,
 				BDCFA76B941C39539E9F8DC1 /* Pods */,
 				FADF697D3259D0E8C3F25919 /* Frameworks */,
@@ -60,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				B697D3D120E5E0E70081A251 /* LJLink.app */,
+				B62AD9DC20EE2894002F3D14 /* LJLinkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +142,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B62AD9DB20EE2894002F3D14 /* LJLinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B62AD9E320EE2894002F3D14 /* Build configuration list for PBXNativeTarget "LJLinkTests" */;
+			buildPhases = (
+				B62AD9D820EE2894002F3D14 /* Sources */,
+				B62AD9D920EE2894002F3D14 /* Frameworks */,
+				B62AD9DA20EE2894002F3D14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B62AD9E220EE2894002F3D14 /* PBXTargetDependency */,
+			);
+			name = LJLinkTests;
+			productName = LJLinkTests;
+			productReference = B62AD9DC20EE2894002F3D14 /* LJLinkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B697D3D020E5E0E70081A251 /* LJLink */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B697D3E520E5E0E80081A251 /* Build configuration list for PBXNativeTarget "LJLink" */;
@@ -129,6 +187,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = taoning;
 				TargetAttributes = {
+					B62AD9DB20EE2894002F3D14 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = B697D3D020E5E0E70081A251;
+					};
 					B697D3D020E5E0E70081A251 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -148,11 +210,19 @@
 			projectRoot = "";
 			targets = (
 				B697D3D020E5E0E70081A251 /* LJLink */,
+				B62AD9DB20EE2894002F3D14 /* LJLinkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B62AD9DA20EE2894002F3D14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B697D3CF20E5E0E70081A251 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +256,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B62AD9D820EE2894002F3D14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B62AD9DF20EE2894002F3D14 /* LJLinkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B697D3CD20E5E0E70081A251 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,6 +277,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B62AD9E220EE2894002F3D14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B697D3D020E5E0E70081A251 /* LJLink */;
+			targetProxy = B62AD9E120EE2894002F3D14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B697D3DC20E5E0E80081A251 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -211,6 +297,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B62AD9E420EE2894002F3D14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LJLinkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanda.LJLinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LJLink.app/Contents/MacOS/LJLink";
+			};
+			name = Debug;
+		};
+		B62AD9E520EE2894002F3D14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LJLinkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanda.LJLinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LJLink.app/Contents/MacOS/LJLink";
+			};
+			name = Release;
+		};
 		B697D3E320E5E0E80081A251 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -361,6 +483,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B62AD9E320EE2894002F3D14 /* Build configuration list for PBXNativeTarget "LJLinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B62AD9E420EE2894002F3D14 /* Debug */,
+				B62AD9E520EE2894002F3D14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B697D3CC20E5E0E70081A251 /* Build configuration list for PBXProject "LJLink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
